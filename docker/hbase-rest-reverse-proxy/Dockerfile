@@ -2,6 +2,7 @@
 FROM sixeyed/hbase-stargate
 
 # Install nginx
+RUN yum update
 RUN yum install -y epel-release; yum clean all; yum install -y nginx --nogpgcheck
 
 # Copy nginx proxy config
